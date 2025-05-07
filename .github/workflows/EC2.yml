@@ -36,7 +36,7 @@ jobs:
           export DB_USER=${{ secrets.REMOTE_DB_USER}}
           export DB_PASSWORD=${{ secrets.REMOTE_DB_PASSWORD}}
           export DB_NAME=${{ secrets.DB_NAME}}
-          export DB_PORT=${{ secrets.PORT}}
+          export DB_PORT=${{ secrets.DB_PORT}}
           export PORT=8000
           chmod +x main
           nohup ./main > nohup.out 2> nohup.err < /dev/null &
