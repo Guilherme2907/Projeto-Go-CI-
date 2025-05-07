@@ -52,7 +52,8 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: programa
-        path: main
+        path: ./main
+        if-no-files-found: error
 
   docker:
     needs: build
