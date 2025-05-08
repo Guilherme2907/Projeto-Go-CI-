@@ -60,9 +60,14 @@ jobs:
     uses: ./.github/workflows/Docker.yml
     secrets: inherit
 
-  ec2:
-    needs: build
-    uses: ./.github/workflows/EC2.yml
+  # ec2:
+  #   needs: build
+  #   uses: ./.github/workflows/EC2.yml
+  #   secrets: inherit
+
+  ecs:
+    needs: docker
+    uses: ./.github/workflows/ECS.yml
     secrets: inherit
 
 
